@@ -1,0 +1,9 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npx tsc *)",
+      "PowerShell(npx tsc --noEmit -p tsconfig.json; \"EXIT=$LASTEXITCODE\")",
+      "Bash(node --check scripts/test-alert-email.js)"
+    ]
+  }
+}

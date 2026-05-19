@@ -1,0 +1,443 @@
+{
+  "pci_dss": {
+    "11.5": {
+      "goals": "Deploy File Integrity Monitoring",
+      "description": "Deploy a change detection mechanism (for example, file integrity monitoring tools) to alert personnel to unauthorized modification of critical system files, configuration files, or content files; and configure the software to perform critical file comparisons at least weekly."
+    },
+    "10.2.5": {
+      "goals": "Log Authentication and Account Changes",
+      "description": "Use of and changes to identification and authentication mechanisms including but not limited to creation of new accounts and elevation of privileges and all changes, additions, or deletions to accounts with root or administrative privileges."
+    },
+    "10.2.7": {
+      "goals": "Log System-Level Object Changes",
+      "description": "Creation and deletion of system level objects"
+    },
+    "10.6.1": {
+      "goals": "Daily Security Event Review",
+      "description": "Review the following at least daily: All security events. Logs of all system components that store, process, or transmit CHD and/or SAD, or that could. impact the security of CHD and/or SAD. Logs of all critical system components. Logs of all servers and system components that perform security functions (for example, firewalls, intrusion detection systems/intrusion prevention systems (IDS/IPS), authentication servers, ecommerce redirection servers, etc.)."
+    },
+    "1.1.1": {
+      "goals": "Firewall Configuration Management",
+      "description": "A formal process for approving and testing all network connections and changes to the firewall and router configurations"
+    },
+    "1.3.4": {
+      "goals": "Control Outbound Traffic",
+      "description": "Do not allow unauthorized outbound traffic from the cardholder data environment to the Internet."
+    },
+    "1.4": {
+      "goals": "Personal Firewall on Portable Devices",
+      "description": "Install personal firewall software or equivalent functionality on any portable computing devices (including company and/or employee-owned) that connect to the Internet when outside the network (for example, laptops used by employees), and which are also used to access the CDE. Firewall (or equivalent) configurations include:Specific configuration settings are defined. Personal firewall (or equivalent functionality) is actively running. Personal firewall (or equivalent functionality) is not alterable by users of the portable computing devices."
+    },
+    "2.2": {
+      "goals": "Develop Configuration Standards",
+      "description": "Develop configuration standards for all system components. Assure that these standards address all known security vulnerabilities and are consistent with industry accepted system hardening standards (CIS, ISO, SANS, NIST)."
+    },
+    "2.2.2": {
+      "goals": "Enable Only Necessary Services",
+      "description": "Enable only necessary services, protocols, daemons, etc., as required for the function of the system."
+    },
+    "2.2.3": {
+      "goals": "Secure Required Services",
+      "description": "Implement additional security features for any required services, protocols, or daemons that are considered to be insecure"
+    },
+    "2.2.4": {
+      "goals": "Configure Security Parameters",
+      "description": "Configure system security parameters to prevent misuse."
+    },
+    "4.1": {
+      "goals": "Use Strong Cryptography",
+      "description": "Use strong cryptography and security protocols (for example, SSL/TLS, IPSEC, SSH, etc.) to safeguard sensitive cardholder data during transmission over open, public networks, including the following:Only trusted keys and certificates are accepted. The protocol in use only supports secure versions or configurations. The encryption strength is appropriate for the encryption methodology in use."
+    },
+    "5.1": {
+      "goals": "Deploy Anti-Virus Software",
+      "description": "Deploy anti-virus software on all systems commonly affected by malicious software (particularly personal computers and servers)."
+    },
+    "5.2": {
+      "goals": "Maintain Anti-Virus Mechanisms",
+      "description": "Ensure that all anti-virus mechanisms are maintained as follows:Are kept current. Perform periodic scans. Generate audit logs which are retained per PCI DSS Requirement 10.7."
+    },
+    "6.2": {
+      "goals": "Patch Management",
+      "description": "Ensure that all system components and software are protected from known vulnerabilities by installing applicable vendor-supplied security patches. Install critical security patches within one month of release."
+    },
+    "6.5": {
+      "goals": "Secure Development Practices",
+      "description": "Address common coding vulnerabilities in software development processes as follows:Train developers in secure coding techniques, including how to avoid common coding vulnerabilities, and understanding how sensitive data is handled in memory. Develop applications based on secure coding guidelines."
+    },
+    "6.5.1": {
+      "goals": "Prevent Injection Flaws",
+      "description": "Injection flaws, particularly SQL injection. Also consider Operating System Command Injection, LDAP and XPath injection flaws as well as other injection flaws."
+    },
+    "6.5.2": {
+      "goals": "Prevent Buffer Overflows",
+      "description": "Buffer overflows"
+    },
+    "6.5.5": {
+      "goals": "Proper Error Handling",
+      "description": "Improper error handling"
+    },
+    "6.5.7": {
+      "goals": "Prevent Cross-Site Scripting",
+      "description": "Cross-site scripting (XSS)"
+    },
+    "6.5.8": {
+      "goals": "Implement Proper Access Control",
+      "description": "Improper access control (such an insecure direct object references, failure to restrict URL access, directory traversal, and failure to restrict user access to functions)."
+    },
+    "6.5.10": {
+      "goals": "Secure Authentication and Session Management",
+      "description": "Broken authentication and session management."
+    },
+    "6.6": {
+      "goals": "Web Application Security",
+      "description": "For public-facing web applications, address new threats and vulnerabilities on an ongoing basis and ensure these applications are protected against known attacks by either of the following methods:Reviewing public-facing web applications via manual or automated application vulnerability security assessment tools or methods, at least annually and after any changes. Installing an automated technical solution that detects and prevents web-based attacks (for example, a web-application firewall) in front of public-facing web applications, to continually check all traffic."
+    },
+    "8.1.2": {
+      "goals": "User Account Management",
+      "description": "Control addition, deletion, and modification of user IDs, credentials, and other identifier objects."
+    },
+    "8.1.4": {
+      "goals": "Remove Inactive Accounts",
+      "description": "Remove/disable inactive user accounts within 90 days."
+    },
+    "8.1.5": {
+      "goals": "Manage Third-Party Access",
+      "description": "Manage IDs used by third parties to access, support, or maintain system components via remote access as follows:Enabled only during the time period needed and disabled when not in use. Monitored when in use."
+    },
+    "8.1.6": {
+      "goals": "Account Lockout Controls",
+      "description": "Limit repeated access attempts by locking out the user ID after not more than six attempts."
+    },
+    "8.1.8": {
+      "goals": "Session Timeout Controls",
+      "description": "If a session has been idle for more than 15 minutes, require the user to reauthenticate to re-activate the terminal or session."
+    },
+    "8.2.4": {
+      "goals": "Password Change Requirements",
+      "description": "Change user passwords/passphrases at least once every 90 days."
+    },
+    "8.5.1": {
+      "goals": "Service Provider Authentication",
+      "description": "Additional requirement for service providers: Service providers with remote access to customer premises (for example, for support of POS systems or servers) must use a unique authentication credential (such as a password/phrase) for each customer."
+    },
+    "8.7": {
+      "goals": "Database Access Controls",
+      "description": "All access to any database containing cardholder data (including access by applications, administrators, and all other users) is restricted as follows:All user access to, user queries of, and user actions on databases are through programmatic methods. Only database administrators have the ability to directly access or query databases. Application IDs for database applications can only be used by the applications (and not by individual users or other non-application processes)."
+    },
+    "10.1": {
+      "goals": "Implement Audit Trails",
+      "description": "Implement audit trails to link all access to system components to each individual user."
+    },
+    "10.2.1": {
+      "goals": "Log Cardholder Data Access",
+      "description": "All individual user accesses to cardholder data"
+    },
+    "10.2.2": {
+      "goals": "Log Administrative Actions",
+      "description": "All actions taken by any individual with root or administrative privileges."
+    },
+    "10.2.4": {
+      "goals": "Log Invalid Access Attempts",
+      "description": "Invalid logical access attempts"
+    },
+    "10.2.6": {
+      "goals": "Log Audit System Changes",
+      "description": "Initialization, stopping, or pausing of the audit logs"
+    },
+    "10.5.2": {
+      "goals": "Protect Audit Logs",
+      "description": "Protect audit trail files from unauthorized modifications"
+    },
+    "10.5.5": {
+      "goals": "Log Integrity Monitoring",
+      "description": "Use file integrity monitoring or change detection software on logs to ensure that existing log data cannot be changed without generating alerts (although new data being added should not cause an alert)."
+    },
+    "10.4": {
+      "goals": "Time Synchronization",
+      "description": "Using time-synchronization technology, synchronize all critical system clocks and times and ensure that the following is implemented for acquiring, distributing, and storing time."
+    },
+    "10.6": {
+      "goals": "Log Review and Analysis",
+      "description": "Review logs and security events for all system components to identify anomalies or suspicious activity"
+    },
+    "11.4": {
+      "goals": "Deploy Intrusion Detection",
+      "description": "Use intrusion detection and/or intrusion prevention techniques to detect and/or prevent intrusions into the network.Monitor all traffic at the perimeter of the cardholder data environment as well as at critical points in the cardholder data environment, and alert personnel to suspected compromises. Keep all intrusion detection and prevention engines, baselines, and signatures up to date."
+    },
+    "11.2.1": {
+      "goals": "Internal Vulnerability Scanning",
+      "description": "Perform quarterly internal vulnerability scans. Address vulnerabilities and perform rescans to verify all \"high risk\" vulnerabilities are resolved in accordance with the entity's vulnerability ranking. Scans must be performed by qualified personnel."
+    },
+    "11.2.3": {
+      "goals": "Change-Based Vulnerability Scanning",
+      "description": "Perform internal and external scans, and rescans as needed, after any significant change. Scans must be performed by qualified personnel."
+    }
+  },
+  "gdpr": {
+    "II_5.1.f": {
+      "goals": "Confidentiality, Integrity, Availability and Resilience",
+      "description": "Ensure the ongoing confidentiality, integrity, availability and resilience of processing systems and services, verifying its modifications, accesses, locations and guarantee the safety of them.File sharing protection and file sharing technologies that meet the requirements of data protection."
+    },
+    "IV_32.2": {
+      "goals": "Account Management and Access Control",
+      "description": "Account management tools that closely monitor actions taken by standard administrators and users who use standard or privileged account credentials are required to control access to data."
+    },
+    "IV_35.7.d": {
+      "goals": "Identification and Investigation of Data Breaches",
+      "description": "Capabilities for identification, blocking and forensic investigation of data breaches by malicious actors, through compromised credentials, unauthorized network access, persistent threats and verification of the correct operation of all components.Network perimeter and endpoint security tools to prevent unauthorized access to the network, prevent the entry of unwanted data types and malicious threats. Anti-malware and anti-ransomware to prevent malware and ransomware threats from entering your devices.A behavioral analysis that uses machine intelligence to identify people who do anomalous things on the network, in order to give early visibility and alert employees who start to become corrupt."
+    },
+    "III_14.2.c": {
+      "goals": "Temporary Processing Restriction",
+      "description": "Restrict the processing of personal data temporarily."
+    },
+    "III_17": {
+      "goals": "Data Erasure",
+      "description": "Permanently erase personal information of a subject."
+    },
+    "IV_24.2": {
+      "goals": "Demonstrate GDPR Compliance",
+      "description": "Be able to demonstrate compliance with the GDPR by complying with data protection policies."
+    },
+    "IV_28": {
+      "goals": "Data Protection During Processing",
+      "description": "Ensure data protection during processing, through technical and organizational measures."
+    },
+    "IV_30.1.g": {
+      "goals": "Processing Activities Documentation",
+      "description": "It is necessary to keep all processing activities documented, to carry out an inventory of data from beginning to end and an audit, in order to know all the places where personal and sensitive data are located, processed, stored or transmitted."
+    },
+    "IV_32.1.c": {
+      "goals": "Data Loss Prevention",
+      "description": "Data Loss Prevention (DLP) capabilities to examine data flows and identify personal data that is not subject to adequate safeguards or authorizations. DLP tools can block or quarantine such data flows. Classify current data appropriately to determine specific categories of data that will be subject to the GDPR."
+    },
+    "IV_33": {
+      "goals": "Data Breach Notification",
+      "description": "Notify the supervisory authority of a violation of the data in 72 hours and in certain cases, the injured parties."
+    },
+    "IV_35.1": {
+      "goals": "Data Protection Impact Assessment",
+      "description": "Perform a data protection impact evaluation for high risk processes. Implement appropriate technical measures to safeguard the rights and freedoms of data subjects, informed by an assessment of the risks to these rights and freedoms."
+    }
+  },
+  "hipaa": {
+    "164.312.c.1": {
+      "goals": "Protect Health Information from Alteration/Destruction",
+      "description": "Implement policies and procedures to protect electronic protected health information from improper alteration or destruction."
+    },
+    "164.312.c.2": {
+      "goals": "Verify Health Information Integrity",
+      "description": "Implement electronic mechanisms to corroborate that electronic protected health information has not been altered or destroyed in an unauthorized manner."
+    },
+    "164.312.b": {
+      "goals": "Audit Controls",
+      "description": "Implement hardware, software, and/or procedural mechanisms that record and examine activity in information systems that contain or use electronic protected health information."
+    },
+    "164.312.a.1": {
+      "goals": "Access Control",
+      "description": "Implement technical policies and procedures for electronic information systems that maintain electronic protected health information to allow access only to those persons or software programs that have access."
+    },
+    "164.312.a.2.I": {
+      "goals": "Unique User Identification",
+      "description": "Assign a unique name and/or number for identifying and tracking user identity."
+    },
+    "164.312.a.2.II": {
+      "goals": "Emergency Access Procedures",
+      "description": "Establish (and implement as needed) procedures for obtaining necessary electronic protected health information during an emergency."
+    },
+    "164.312.a.2.III": {
+      "goals": "Automatic Logoff",
+      "description": "Implement electronic procedures that terminate an electronic session after a predetermined time of inactivity."
+    },
+    "164.312.a.2.IV": {
+      "goals": "Encryption and Decryption",
+      "description": "Implement a mechanism to encrypt and decrypt electronic protected health information."
+    },
+    "164.312.d": {
+      "goals": "Person or Entity Authentication",
+      "description": "Implement procedures to verify that a person or entity seeking access to electronic protected health information is the one claimed."
+    },
+    "164.312.e.1": {
+      "goals": "Transmission Security",
+      "description": "Implement technical security measures to guard against unauthorized access to electronic protected health information that is being transmitted over an electronic communications network."
+    },
+    "164.312.e.2.I": {
+      "goals": "Integrity of Transmitted Data",
+      "description": "Implement security measures to ensure that electronically transmitted electronic protected health information is not improperly modified without detection until disposed of."
+    },
+    "164.312.e.2.II": {
+      "goals": "Encryption of Transmitted Data",
+      "description": "Implement a mechanism to encrypt electronic protected health information whenever deemed appropriate."
+    }
+  },
+  "nist_800_53": {
+    "SI.7": {
+      "goals": "Software, Firmware, and Information Integrity",
+      "description": "SOFTWARE, FIRMWARE, AND INFORMATION INTEGRITY - The organization employs integrity verification tools to detect unauthorized changes to organization-defined software, firmware, and information."
+    },
+    "AC.7": {
+      "goals": "Unsuccessful Logon Attempts",
+      "description": "UNSUCCESSFUL LOGON ATTEMPTS - Enforces a limit of consecutive invalid logon attempts by a user during a time period."
+    },
+    "AU.6": {
+      "goals": "Audit Review, Analysis, and Reporting",
+      "description": "AUDIT REVIEW, ANALYSIS, AND REPORTING - Reviews and analyzes information system audit records."
+    },
+    "AC.2": {
+      "goals": "Account Management",
+      "description": "ACCOUNT MANAGEMENT - Identifies and selects the following types of information system accounts to support organizational missions/business functions."
+    },
+    "AC.6": {
+      "goals": "Least Privilege",
+      "description": "LEAST PRIVILEGE - The organization employs the principle of least privilege, allowing only authorized accesses for users (or processes acting on behalf of users) which are necessary to accomplish assigned tasks in accordance with organizational missions and business functions."
+    },
+    "AC.12": {
+      "goals": "Session Termination",
+      "description": "SESSION TERMINATION - The information system automatically terminates a user session."
+    },
+    "AU.5": {
+      "goals": "Response to Audit Processing Failures",
+      "description": "RESPONSE TO AUDIT PROCESSING FAILURES - The information system alerts organization-defined personnel or roles in the event of an audit processing failure and takes organization-defined actions to be taken (e.g., shut down information system, overwrite oldest audit records, stop generating audit records)."
+    },
+    "AU.8": {
+      "goals": "Time Stamps",
+      "description": "TIME STAMPS - Uses internal system clocks to generate time stamps for audit records and records time stamps for audit records."
+    },
+    "AU.9": {
+      "goals": "Protection of Audit Information",
+      "description": "PROTECTION OF AUDIT INFORMATION - The information system protects audit information and audit tools from unauthorized access, modification, and deletion."
+    },
+    "AU.12": {
+      "goals": "Audit Generation",
+      "description": "AUDIT GENERATION - The information system provides audit record generation capability for the auditable events at organization-defined information system components, allows organization-defined personnel or roles to select which auditable events are to be audited by specific components of the information system and generates audit records."
+    },
+    "CA.3": {
+      "goals": "System Interconnections",
+      "description": "SYSTEM INTERCONNECTIONS - Authorizes connections from the information system to other information systems through the use of Interconnection Security Agreements, Documents, for each interconnection, the interface characteristics, security requirements, and the nature of the information communicated and Reviews and updates Interconnection Security Agreements"
+    },
+    "CM.1": {
+      "goals": "Configuration Management Policy and Procedures",
+      "description": "CONFIGURATION MANAGEMENT POLICY AND PROCEDURES - Develops, documents, and disseminates to a configuration management policy. Revies and updates the current configuration management policy and procedures."
+    },
+    "CM.3": {
+      "goals": "Configuration Change Control",
+      "description": "CONFIGURATION CHANGE CONTROL - The organization determines the types of changes to the information system that are configuration-controlled."
+    },
+    "CM.5": {
+      "goals": "Access Restrictions for Change",
+      "description": "ACCESS RESTRICTIONS FOR CHANGE - The organization defines, documents, approves, and enforces physical and logical access restrictions associated with changes to the information system."
+    },
+    "IA.4": {
+      "goals": "Identifier Management",
+      "description": "IDENTIFIER MANAGEMENT - The organization manages information system identifiers by: Receiving authorization from organization-defined personnel or roles to assign an individual, group, role, or device identifier. Selecting an identifier that identifies an individual, group, role, or device. Assigning the identifier to the intended individual, group, role, or device. Preventing reuse of identifiers for a organization-defined time period. Disabling the identifier after organization-defined time period of inactivity."
+    },
+    "IA.5": {
+      "goals": "Authenticator Management",
+      "description": "AUTHENTICATOR MANAGEMENT - The organization manages information system authenticators by verifying, as part of the initial authenticator distribution, the identity of the individual, group role, or device receiving the authenticator."
+    },
+    "IA.10": {
+      "goals": "Adaptive Identification and Authentication",
+      "description": "ADAPTIVE IDENTIFICATION AND AUTHENTICATION - The organization requires that individuals accessing the information system employ organization-defined supplemental authentication techniques or mechanisms under specific organization-defined circumstances or situations."
+    },
+    "SA.11": {
+      "goals": "Developer Security Testing and Evaluation",
+      "description": "DEVELOPER SECURITY TESTING AND EVALUATION - The organization requires the developer of the information system, system component, or information system service to create and implement a security assessment plan."
+    },
+    "SC.2": {
+      "goals": "Application Partitioning",
+      "description": "APPLICATION PARTITIONING - The information system separates user functionality (including user interface services) from information system management functionality."
+    },
+    "SC.7": {
+      "goals": "Boundary Protection",
+      "description": "BOUNDARY PROTECTION - The information system monitors and controls communications at the external boundary of the system and at key internal boundaries within the system."
+    },
+    "SC.8": {
+      "goals": "Transmission Confidentiality and Integrity",
+      "description": "TRANSMISSION CONFIDENTIALITY AND INTEGRITY - The information system protects the confidentiality and integrity of transmitted information."
+    },
+    "SI.2": {
+      "goals": "Flaw Remediation",
+      "description": "FLAW REMEDIATION - The organization identifies, reports, and corrects information system flaws; tests software and firmware updates related to flaw remediation for effectiveness and potential side effects before installation; installs security-relevant software and firmware updates within organizationdefined time period of the release of the updates and incorporates flaw remediation into the organizational configuration management process."
+    },
+    "SI.3": {
+      "goals": "Malicious Code Protection",
+      "description": "MALICIOUS CODE PROTECTION - The organization employs malicious code protection mechanisms at information system entry and exit points to detect and eradicate malicious code, updates malicious code protection mechanisms whenever new releases are available in accordance with organizational configuration management policy and procedures, configures malicious code protection mechanisms and addresses the receipt of false positives during malicious code detection and eradication and the resulting potential impact on the availability of the information system."
+    }
+  },
+  "tsc": {
+    "CC6.8": {
+      "goals": "Malicious Software Prevention",
+      "description": "The entity implements controls to prevent or detect and act upon the introduction of unauthorized or malicious software to meet the entity's objectives."
+    },
+    "CC7.2": {
+      "goals": "System Monitoring for Anomalies",
+      "description": "The entity monitors system components and the operation of those components for anomalies that are indicative of malicious acts, natural disasters, and errors affecting the entity's ability to meet its objectives; anomalies are analyzed to determine whether they represent security events."
+    },
+    "CC7.3": {
+      "goals": "Security Event Evaluation",
+      "description": "The entity evaluates security events to determine whether they could or have resulted in a failure of the entity to meet its objectives (security incidents) and, if so, takes actions to prevent or address such failures."
+    },
+    "CC6.1": {
+      "goals": "Logical Access Security",
+      "description": "The entity implements logical access security software, infrastructure, and architectures over protected information assets to protect them from security events to meet the entity's objectives."
+    },
+    "PI1.4": {
+      "goals": "Output Delivery",
+      "description": "The entity implements policies and procedures to make available or deliver output completely, accurately, and timely in accordance with specifications to meet the entity's objectives."
+    },
+    "PI1.5": {
+      "goals": "Data Storage",
+      "description": "The entity implements policies and procedures to store inputs, items in processing, and outputs completely, accurately, and timely in accordance with system specifications to meet the entity's objectives."
+    },
+    "A1.1": {
+      "goals": "Capacity Management",
+      "description": "The entity maintains, monitors, and evaluates current processing capacity and use of system components (infrastructure, data, and software) to manage capacity demand and to enable the implementation of additional capacity to help meet its objectives."
+    },
+    "A1.2": {
+      "goals": "Environmental Protections",
+      "description": "The entity authorizes, designs, develops or acquires, implements, operates, approves, maintains, and monitors environmental protections, software, data backup processes, and recovery infrastructure to meet its objectives."
+    },
+    "CC5.1": {
+      "goals": "Control Activities",
+      "description": "The entity selects and develops control activities that contribute to the mitigation of risks to the achievement of objectives to acceptable levels."
+    },
+    "CC5.2": {
+      "goals": "General Control Activities Over Technology",
+      "description": "The entity also selects and develops general control activities over technology to support the achievement of objectives."
+    },
+    "CC6.2": {
+      "goals": "User Access Management",
+      "description": "Prior to issuing system credentials and granting system access, the entity registers and authorizes new internal and external users whose access is administered by the entity. For those users whose access is administered by the entity, user system credentials are removed when user access is no longer authorized."
+    },
+    "CC6.3": {
+      "goals": "Access Authorization and Management",
+      "description": "The entity authorizes, modifies, or removes access to data, software, functions, and other protected information assets based on roles, responsibilities, or the system design and changes, giving consideration to the concepts of least privilege and segregation of duties, to meet the entity's objectives."
+    },
+    "CC6.4": {
+      "goals": "Physical Access Restrictions",
+      "description": "The entity restricts physical access to facilities and protected information assets (for example, data center facilities, backup media storage, and other sensitive locations) to authorized personnel to meet the entity's objectives"
+    },
+    "CC6.6": {
+      "goals": "External Threat Protection",
+      "description": "The entity implements logical access security measures to protect against threats from sources outside its system boundaries."
+    },
+    "CC6.7": {
+      "goals": "Information Transmission Protection",
+      "description": "The entity restricts the transmission, movement, and removal of information to authorized internal and external users and processes, and protects it during transmission, movement, or removal to meet the entity's objectives."
+    },
+    "CC7.1": {
+      "goals": "Vulnerability Detection and Monitoring",
+      "description": "To meet its objectives, the entity uses detection and monitoring procedures to identify (1) changes to configurations that result in the introduction of new vulnerabilities, and (2) susceptibilities to newly discovered vulnerabilities."
+    },
+    "CC7.4": {
+      "goals": "Incident Response",
+      "description": "The entity responds to identified security incidents by executing a defined incident-response program to understand, contain, remediate, and communicate security incidents, as appropriate."
+    },
+    "CC8.1": {
+      "goals": "Change Management",
+      "description": "The entity authorizes, designs, develops or acquires, configures, documents, tests, approves, and implements changes to infrastructure, data, software, and procedures to meet its objectives"
+    }
+  },
+  "gpg13": {
+    "_comment": "GPG13 (German Government Protection Profile 13) - Add requirements as discovered from Wazuh"
+  }
+}
