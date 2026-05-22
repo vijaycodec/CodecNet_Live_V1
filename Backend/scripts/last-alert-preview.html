@@ -1,50 +1,132 @@
-
 <!DOCTYPE html>
 <html>
-<head>
-  <meta charset="utf-8" />
-  <title>Critical Alert vijay</title>
-</head>
-<body style="margin:0;padding:0;background:#f4f6f8;font-family:Arial,Helvetica,sans-serif;color:#222;">
-  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="background:#f4f6f8;padding:24px 0;">
+<body style="margin:0;padding:24px;background:#f3f4f6;font-family:Arial,Helvetica,sans-serif;color:#111827;">
+  <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="max-width:720px;margin:0 auto;background:#ffffff;border:1px solid #e5e7eb;border-radius:6px;overflow:hidden;">
     <tr>
-      <td align="center">
-        <table role="presentation" width="640" cellspacing="0" cellpadding="0" border="0" style="background:#ffffff;border-radius:8px;overflow:hidden;box-shadow:0 2px 6px rgba(0,0,0,0.08);">
+      <td style="background:#b91c1c;padding:14px 18px;color:#ffffff;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0">
           <tr>
-            <td style="background:#b91c1c;color:#ffffff;padding:18px 24px;font-size:20px;font-weight:bold;">
-              &#9888; Critical Security Alert
-            </td>
-          </tr>
-          <tr>
-            <td style="padding:24px;">
-              <p style="margin:0 0 12px;font-size:14px;color:#555;"><strong>Organisation:</strong> CodecNet Test Organisation</p>
-              <h2 style="margin:0 0 16px;font-size:18px;color:#111;">Multiple failed SSH login attempts followed by a successful login from a new geography. Possible credential brute-force + account takeover.</h2>
-              <table role="presentation" width="100%" cellspacing="0" cellpadding="0" border="0" style="font-size:14px;border-collapse:collapse;">
-                <tr>
-                  <td style="padding:8px 0;width:140px;color:#555;"><strong>Alert Severity</strong></td>
-                  <td style="padding:8px 0;color:#b91c1c;font-weight:bold;">Critical (13)</td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 0;color:#555;"><strong>Alert Source</strong></td>
-                  <td style="padding:8px 0;">web-prod-01</td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 0;color:#555;"><strong>Alert Time</strong></td>
-                  <td style="padding:8px 0;">13 May 2026, 3:37:19 pm</td>
-                </tr>
-                <tr>
-                  <td style="padding:8px 0;color:#555;vertical-align:top;"><strong>Description</strong></td>
-                  <td style="padding:8px 0;">Multiple failed SSH login attempts followed by a successful login from a new geography. Possible credential brute-force + account takeover.</td>
-                </tr>
-              </table>
-            </td>
-          </tr>
-          <tr>
-            <td style="background:#f1f5f9;color:#555;padding:14px 24px;font-size:12px;">
-              This is an automated notification from CodecNet SOC. Please do not reply to this email.
+            <td style="font-size:15px;font-weight:700;letter-spacing:0.02em;color:#ffffff;">&#9888;&nbsp; CRITICAL SECURITY ALERT</td>
+            <td align="right" style="font-size:11px;color:#ffffff;">
+              <span style="display:inline-block;padding:4px 10px;background:#7f1d1d;border-radius:4px;font-weight:700;letter-spacing:0.05em;color:#ffffff;">P1 &mdash; IMMEDIATE ACTION</span>
             </td>
           </tr>
         </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:20px 22px 8px;font-size:14px;line-height:1.55;color:#111827;">
+        <p style="margin:0 0 12px;">Dear CodecNet Test Organisation,</p>
+        <p style="margin:0 0 14px;">CodecNet Security Operations Centre (SOC) has detected a <strong>Critical</strong> severity security event on your monitored infrastructure. Please find the incident details, observed indicators and recommended actions below.</p>
+        <p style="margin:0;font-size:12px;color:#4b5563;"><strong>Reported At:</strong> 20 May 2026, 2:45:46 pm IST</p>
+      </td>
+    </tr>
+    <tr><td style="padding:8px 14px 0;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e5e7eb;border-radius:4px;border-collapse:separate;">
+    <tr>
+      <td colspan="2" style="padding:14px 14px 8px;font-size:12px;font-weight:700;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;">Incident Summary</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Alert Title</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;"><strong>Multiple failed SSH login attempts followed by a successful login from a new geography. Possible credential brute-force + account takeover.</strong></td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Severity</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;"><span style="display:inline-block;padding:4px 10px;border-radius:4px;background:#fde2e1;color:#b91c1c;font-size:11px;font-weight:700;letter-spacing:0.05em;">CRITICAL</span></td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Rule Description</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;">Possible SSH brute-force attack with successful login from a new geography</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Detected At (IST)</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;">20 May 2026, 2:45:46 pm</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">MITRE ATT&amp;CK</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;">T1110 — Brute Force</td>
+    </tr></table></td></tr>
+    <tr><td style="padding:14px 14px 0;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e5e7eb;border-radius:4px;border-collapse:separate;">
+    <tr>
+      <td colspan="2" style="padding:14px 14px 8px;font-size:12px;font-weight:700;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;">Affected Asset</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Agent / Hostname</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;"><code style="font-family:Consolas,Menlo,monospace;font-size:12px;">web-prod-01</code></td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Internal IP</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;"><code style="font-family:Consolas,Menlo,monospace;font-size:12px;">10.0.0.21</code></td>
+    </tr></table></td></tr>
+    <tr><td style="padding:14px 14px 0;"><table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e5e7eb;border-radius:4px;border-collapse:separate;">
+    <tr>
+      <td colspan="2" style="padding:14px 14px 8px;font-size:12px;font-weight:700;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;">Source / Indicators of Compromise</td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Source IP</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;"><code style="font-family:Consolas,Menlo,monospace;font-size:12px;">203.0.113.42</code><span style="display:inline-block;margin-left:6px;padding:2px 8px;border-radius:10px;background:#fee2e2;color:#b91c1c;font-size:11px;font-weight:600;">external</span></td>
+    </tr>
+    <tr>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;background:#f9fafb;color:#374151;font-size:13px;width:38%;vertical-align:top;">Source Country / GeoIP</td>
+      <td style="padding:10px 14px;border-bottom:1px solid #e5e7eb;color:#111827;font-size:13px;vertical-align:top;">Unknown</td>
+    </tr></table></td></tr>
+    
+    <tr>
+      <td style="padding:14px 14px 0;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e5e7eb;border-radius:4px;">
+          <tr>
+            <td style="padding:12px 16px 6px;font-size:12px;font-weight:700;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;">SOC Analysis</td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 14px;font-size:13px;line-height:1.6;color:#111827;"><p style="margin:0;">A brute-force SSH attack targeting the root account on web-prod-01 was detected from an unknown geographic location at source IP 203.0.113.42, which successfully authenticated into the system. This indicates a compromised or misconfigured account that could allow the attacker to establish persistent access and potentially move laterally within the network. The use of OpenSSH for authentication suggests the attacker is leveraging standard SSH protocols to bypass initial defenses.</p></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    
+    <tr>
+      <td style="padding:14px 14px 0;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e5e7eb;border-radius:4px;">
+          <tr>
+            <td style="padding:12px 16px 6px;font-size:12px;font-weight:700;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;">Recommended Actions (Client)</td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 14px;font-size:13px;line-height:1.6;color:#111827;"><ol style="margin:0;padding-left:20px;"><li style="margin:4px 0;">Immediately isolate web-prod-01 from the network to prevent further unauthorized access.</li><li style="margin:4px 0;">Force a password reset or rotate all credentials associated with the root account on this host.</li><li style="margin:4px 0;">Block the source IP 203.0.113.42 at the firewall and update threat intelligence feeds.</li><li style="margin:4px 0;">Enable multi-factor authentication for SSH access across all production servers.</li><li style="margin:4px 0;">Conduct a forensic investigation to identify any additional compromised accounts or lateral movement indicators.</li><li style="margin:4px 0;">Review and restrict SSH access policies to allow only known internal IPs where possible.</li><li style="margin:4px 0;">Confirm remediation status with the SOC team before restoring full network connectivity.</li></ol></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    
+    
+    <tr>
+      <td style="padding:14px 14px 0;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="border:1px solid #e5e7eb;border-radius:4px;">
+          <tr>
+            <td style="padding:12px 16px 6px;font-size:12px;font-weight:700;letter-spacing:0.08em;color:#6b7280;text-transform:uppercase;">Compliance &amp;amp; Reporting</td>
+          </tr>
+          <tr>
+            <td style="padding:0 16px 14px;font-size:13px;line-height:1.6;color:#111827;"><p style="margin:0;">This incident must be reported to CERT-In within six hours as per the CERT-In Directions dated 28.04.2022, given its severity and impact on critical infrastructure. Additionally, if this host processes personal data, the Data Protection Board of India under the DPDP Act may require notification depending on the nature of the breach. CodecNet SOC can assist in preparing the required documentation and submitting the incident report to CERT-In.</p></td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:18px 14px 0;">
+        <table role="presentation" width="100%" cellspacing="0" cellpadding="0" style="background:#f3f4f6;border-left:4px solid #b91c1c;border-radius:4px;">
+          <tr>
+            <td style="padding:14px 16px;font-size:13px;color:#111827;line-height:1.7;">
+              <div style="color:#b91c1c;font-weight:700;letter-spacing:0.05em;font-size:12px;margin-bottom:6px;">ESCALATION CONTACTS &mdash; 24x7</div>
+              <div>SOC Email: soc@codecnetworks.in</div>
+              
+            </td>
+          </tr>
+        </table>
+      </td>
+    </tr>
+    <tr>
+      <td style="padding:18px 22px 22px;font-size:12px;color:#6b7280;border-top:1px solid #e5e7eb;line-height:1.6;">
+        Regards,<br>
+        <strong style="color:#111827;">CodecNet Security Operations Centre</strong>&nbsp;&nbsp;|&nbsp;&nbsp;24x7 Managed Detection &amp; Response<br>
+        This is a system-generated notification from the CodecNet SOC platform. Please do not share alert details on unsecured channels. Confidential &mdash; for intended recipient only.
       </td>
     </tr>
   </table>

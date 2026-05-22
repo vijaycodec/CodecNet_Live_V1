@@ -6,9 +6,10 @@ import {
   sendMail,
   getSenderEmail
 } from './email.service.js';
+import { generateAlertNarrative, isLlmEnabled } from './llmAnalysis.service.js';
 
-// Wazuh rule.level >= 12 is treated as Critical
-const CRITICAL_LEVEL_THRESHOLD = parseInt(process.env.CRITICAL_LEVEL_THRESHOLD, 10) || 12;
+// Wazuh rule.level >= 8 is treated as Critical (lowered from 12 for testing minor alerts)
+const CRITICAL_LEVEL_THRESHOLD = parseInt(process.env.CRITICAL_LEVEL_THRESHOLD, 10) || 8;
 
 const normalizeAlert = (raw) => {
   if (!raw) return null;
@@ -125,6 +126,23 @@ export const sendCriticalAlertEmail = async ({
 
   if (toList.length === 0) {
     return { skipped: true, reason: 'no_recipients' };
+  }
+
+  // Ask the LLM (LM Studio) to generate the three narrative sections.
+  // On failure we proceed without them - the basic alert telemetry still ships.
+  if (isLlmEnabled()) {
+    try {
+      const narrative = await generateAlertNarrative(normalized);
+      if (narrative.ok) {
+        normalized.soc_analysis = narrative.soc_analysis;
+        normalized.recommended_actions = narrative.recommended_actions;
+        normalized.compliance_note = narrative.compliance_note;
+      } else {
+        console.warn(`[alert-email] LLM narrative skipped (${narrative.reason})${narrative.error ? ': ' + narrative.error : ''}`);
+      }
+    } catch (err) {
+      console.warn(`[alert-email] LLM narrative threw: ${err.message}`);
+    }
   }
 
   const { subject, text, html } = buildCriticalAlertEmail(normalized, orgName);

@@ -20,6 +20,7 @@ import {
   getSenderEmail,
   getDefaultCc
 } from '../services/email.service.js';
+import { generateAlertNarrative, isLlmEnabled } from '../services/llmAnalysis.service.js';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -109,6 +110,40 @@ const EXTRA_CC = process.argv.slice(3); // additional CCs from CLI
     },
     full_log: 'Failed password for invalid user root from 203.0.113.42 port 52344 ssh2'
   };
+
+  // Exercise the LLM path so the test email matches the real production flow
+  // (the live pipeline calls this from alertNotification.service.js).
+  if (isLlmEnabled()) {
+    console.log('   Calling LLM for SOC ANALYSIS / RECOMMENDED ACTIONS / COMPLIANCE...');
+    const started = Date.now();
+    const narrative = await generateAlertNarrative({
+      alert_title: fakeAlert.rule.description,
+      alert_severity: fakeAlert.severity,
+      alert_time: fakeAlert.time,
+      rule_description: fakeAlert.rule.description,
+      agent_name: fakeAlert.agent.name,
+      agent_ip: fakeAlert.agent.ip,
+      target_user_name: fakeAlert.data?.dstuser,
+      mitre: 'T1110 - Brute Force',
+      src_ip: fakeAlert.srcip,
+      geo_country: fakeAlert.location?.country,
+      src_port: 52344,
+      auth_package_name: 'OpenSSH',
+      logon_type: 'Network'
+    });
+    const elapsed = Date.now() - started;
+    if (narrative.ok) {
+      fakeAlert.soc_analysis = narrative.soc_analysis;
+      fakeAlert.recommended_actions = narrative.recommended_actions;
+      fakeAlert.compliance_note = narrative.compliance_note;
+      console.log(`   LLM OK (${elapsed} ms) - three sections injected.`);
+    } else {
+      console.warn(`   LLM skipped (${narrative.reason})${narrative.error ? ': ' + narrative.error : ''}`);
+      console.warn('   Email will go out WITHOUT the three narrative sections.');
+    }
+  } else {
+    console.log('   LLM disabled (LLM_ANALYSIS_ENABLED=false) - email will go out without narrative sections.');
+  }
 
   const { subject, text, html } = buildCriticalAlertEmail(fakeAlert, 'CodecNet Test Organisation');
   const cc = buildCcList([], EXTRA_CC);
